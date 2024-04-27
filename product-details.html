@@ -227,7 +227,7 @@
             // If the product is in the cart, change the button text to "Added"
             if (isInCart || localStorage.getItem("buttonClicked")) {
                 addToCartButton.innerHTML = "Added";
-                addToCartButton.style.backgroundColor = "pink";
+                addToCartButton.style.backgroundColor = "#282828";
                 addToCartButton.disabled = true; // Disables the button after it's clicked
             }
         
@@ -264,7 +264,7 @@
         
                 // Change button text to "Added" after adding to cart
                 this.innerHTML = "Added";
-                this.style.backgroundColor = "pink";
+                this.style.backgroundColor = "#282828";
                 this.disabled = true; // Disables the button after it's clicked
         
                 // Set a flag in local storage to indicate that the button has been clicked
