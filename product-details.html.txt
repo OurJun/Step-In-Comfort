@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StepInComfort.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>All Product - StepInComfort</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Step In Comfort</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="StepInComfort.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="#fot">About</a></li>
+                    <li><a href="#fot">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+                <a href="cart.html"><i class='bx bx-cart'></i></a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- PRODUCT SECTION -->
+    <section class="all-Product">
+
+                           <!-- Product Details -->
+        <div class="single-product">
+            <div class="product-details">
+                <div class="img">
+                    <img src="SportsMenNikeShoes.webp" alt="">
+                </div>
+                <div class="img-details">
+                    <p>Fashion / Shoes</p>
+                    <h1>Sports Men Nike Shoes</h1>
+                    <h4>$42.00</h4>
+                    <select id="productSize">
+                        <option>Select Size</option>
+                        <option>Large</option>
+                        <option>Medium</option>
+                        <option>Small</option>
+                    </select>
+                    <button class="add" id="addToCartBtn" onclick="changeButton()" data-image="SportsMenNikeShoes.webp" data-name="Sports Men Nike Shoes" data-price="42.00" data-size="Select Size" data-quantity="1">Add To Cart</button>
+                    <h3>Product Details</h3>
+                    <br>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, nisi.<br> Exercitationem similique consectetur quasi nostrum laboriosam dolor aspernatur eveniet <br>officia! Sed eligendi in ipsam iure repellat natus libero ex magnam.</p>
+                </div>
+            </div>
+        </div>
+
+   
+        <div class="info-Products">
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="product-details.html"><img src="SportsMenNikeShoes.webp" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="MenCasualShoesAirForce1.jpg" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Men Casual Shoes Air Force 1</h4>
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="SportsMenNikeShoes.webp" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                    
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594;</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            // Get the button element
+            var addToCartButton = document.getElementById("addToCartBtn");
+        
+            // Get the product information from the button attributes
+            var productData = {
+                image: addToCartButton.getAttribute("data-image"),
+                name: addToCartButton.getAttribute("data-name"),
+                price: addToCartButton.getAttribute("data-price"),
+                size: addToCartButton.getAttribute("data-size"),
+                quantity: addToCartButton.getAttribute("data-quantity")
+            };
+        
+            // Get the cart items from local storage or initialize an empty array
+            var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        
+            // Check if the product is already in the cart
+            var isInCart = cartItems.some(function(item) {
+                return item.name === productData.name && item.size === productData.size;
+            });
+        
+            // If the product is in the cart, change the button text to "Added"
+            if (isInCart || localStorage.getItem("buttonClicked")) {
+                addToCartButton.innerHTML = "Added";
+                addToCartButton.style.backgroundColor = "pink";
+                addToCartButton.disabled = true; // Disables the button after it's clicked
+            }
+        
+            // Add a click event listener to the button
+            addToCartButton.addEventListener("click", function() {
+                // Get the selected size
+                var sizeSelect = document.getElementById("productSize");
+                var selectedSize = sizeSelect.options[sizeSelect.selectedIndex].text;
+        
+                // Check if a size is selected
+                if (selectedSize === "Select Size") {
+                    alert("Please select a size before adding to cart.");
+                    return;
+                }
+        
+                // Get the product information
+                var image = this.getAttribute("data-image");
+                var name = this.getAttribute("data-name");
+                var price = this.getAttribute("data-price");
+                var size = selectedSize; // Use the selected size
+                var quantity = this.getAttribute("data-quantity");
+        
+                // Get the cart items from local storage or initialize an empty array
+                var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        
+                // Push the new item to the cart
+                cartItems.push({image: image, name: name, price: price, size: size, quantity: quantity});
+        
+                // Store the updated cart items in local storage
+                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        
+                // Display the cart items (assuming you have a function named displayCartItems)
+                // displayCartItems();
+        
+                // Change button text to "Added" after adding to cart
+                this.innerHTML = "Added";
+                this.style.backgroundColor = "pink";
+                this.disabled = true; // Disables the button after it's clicked
+        
+                // Set a flag in local storage to indicate that the button has been clicked
+                localStorage.setItem("buttonClicked", true);
+            });
+                // Reset button state if cart is empty
+        if (cartItems.length === 0) {
+            addToCartButton.innerHTML = "Add To Cart";
+            addToCartButton.style.backgroundColor = ""; // Reset button background color
+            addToCartButton.disabled = false; // Enable the button
+            localStorage.removeItem("buttonClicked"); // Remove the flag
+        }
+        });
+        </script>
+        
+    
+        
+        
+        
+
+       <!-- CONTACT SECTION -->
+       <footer class="Contact">
+        <div class="Contact-Info">  
+            
+            <div class="social-icons">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nisi iure fugit voluptate, quam consequuntur facilis placeat error.</p>
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+            </div>
+
+            <div class="second-info">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Term & Condition</a></li>
+                    <li><a href="#">Return & Exchange</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Private Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="third-info">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shoes</a></li>
+                </ul>
+            </div>
+
+            <div class="fourth-info">
+                <h3>Contact Us</h3>
+                <ul class="info">
+                    <li>
+                        <span><i class='bx bxs-phone-call'></i></span><p><a href="tel:+63 123456789">+63 123456789</a></p>
+                    </li>
+                    <li>
+                        <span><i class='bx bx-envelope'></i></span><p><a href="mailto:knowmore@gmail.com">knowmore@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</footer>
+    
+<div class="End">
+    <p>Copyright © @2024. All Rights Reserved by Arjun Deloterio</p>
+</div>
+    
+</body>
+</html>

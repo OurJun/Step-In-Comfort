@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StepInComfort.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>All Product - StepInComfort</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Step In Comfort</h1>
+            </div>
+            <nav>
+                <ul id="MenuNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+
+            <a href="cart.html" id="carts"><i class='bx bx-cart'></i></a>
+            <img src="menu.jpg" class="menu-icon" onclick="menutoggle()">
+
+            <script>
+                var MenuNav = document.getElementById("MenuNav");
+            
+                MenuNav.style.maxHeight = "0px";
+            
+                function menutoggle() {
+                    if(MenuNav.style.maxHeight == "0px")
+                    {
+                        MenuNav.style.maxHeight = "200px";
+                    }
+                    else 
+                    {
+                        MenuNav.style.maxHeight = "0px";
+                    }
+                }
+            
+            </script>
+            
+        </div>
+        
+    </header>
+    
+    <section class="cart-container carts-page">
+        <table>
+            <tr>
+                <th>Product</th>
+                <th class="que" id="quan">Quantity</th>
+                <th class="que" id="sub">Subtotal</th>
+            </tr>
+        </table>
+        
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>$0.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>$0.00</td>
+                </tr>
+            </table>
+        </div>
+        <div class="buy"><button>Procced To Checkout</button></div>
+    </section>
+   
+    <!-- CONTACT SECTION -->
+    <footer class="Contact" id="fot">
+        <div class="Contact-Info">  
+            
+            <div class="social-icons">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nisi iure fugit voluptate, quam consequuntur facilis placeat error.</p>
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+            </div>
+
+            <div class="second-info">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Term & Condition</a></li>
+                    <li><a href="#">Return & Exchange</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Private Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="third-info">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shoes</a></li>
+                </ul>
+            </div>
+
+            <div class="fourth-info">
+                <h3>Contact Us</h3>
+                <ul class="info">
+                    <li>
+                        <span><i class='bx bxs-phone-call'></i></span><p><a href="tel:+63 123456789">+63 123456789</a></p>
+                    </li>
+                    <li>
+                        <span><i class='bx bx-envelope'></i></span><p><a href="mailto:knowmore@gmail.com">knowmore@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="End">
+        <p>Copyright © @2024. All Rights Reserved by Arjun Deloterio</p>
+    </div>
+
+    <script>
+        // Function to display cart items
+        function displayCartItems() {
+            var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            var cartContainer = document.querySelector(".cart-container table");
+
+           
+    // Loop through each item in the cart and display it
+    cartItems.forEach(function(item, index) {
+        var cartItem = document.createElement("tr");
+        cartItem.innerHTML = `
+            <td>
+                <div class="cart-info">
+                    <img src="${item.image}">
+                    <div>
+                        <p>${item.name}</p><br>
+                        <p>Size: ${item.size}</p><br>
+                        <small>Price: ${item.price}</small>
+                        <br><br><br>
+                        <a onclick="removeItem(${index})">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="${item.quantity}" min="0" max="10" onchange="updatePrice(${index}, this.value)"></td>
+            <td id="subtotal${index}">$${item.price}</td>
+        `;
+                cartContainer.appendChild(cartItem);
+            });
+    
+            // Update total price
+            updateTotalPrice(cartItems);
+        }
+
+        // Function to update subtotal when input quantity changes
+function updatePrice(index, newQuantity) {
+    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    var item = cartItems[index];
+    var newPrice = item.price * parseInt(newQuantity);
+    item.quantity = parseInt(newQuantity);
+    document.getElementById(`subtotal${index}`).textContent = `$${newPrice.toFixed(2)}`;
+    updateTotalPrice(cartItems);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+ 
+        // Function to remove item from cart
+        function removeItem(index) {
+            var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartItems.splice(index, 1); // Remove the item at the specified index
+            localStorage.setItem("cartItems", JSON.stringify(cartItems)); // Update the cart in local storage
+            location.reload(); // Refresh the page
+        }
+    
+       // Function to update total price
+function updateTotalPrice(cartItems) {
+    var subtotal = 0;
+    cartItems.forEach(function(item) {
+        // Calculate subtotal for each item based on quantity
+        subtotal += item.price * item.quantity;
+    });
+
+    var tax = subtotal * 0.15; // Assuming 15% tax
+    var total = subtotal + tax;
+
+    // Update subtotal, tax, and total in the HTML
+    document.querySelector(".total-price table tr:nth-child(1) td:nth-child(2)").textContent = "$" + subtotal.toFixed(2);
+    document.querySelector(".total-price table tr:nth-child(2) td:nth-child(2)").textContent = "$" + tax.toFixed(2);
+    document.querySelector(".total-price table tr:nth-child(3) td:nth-child(2)").textContent = "$" + total.toFixed(2);
+}
+
+    
+        // Display cart items when the page loads
+        displayCartItems();
+    </script>
+    
+</body>
+</html>

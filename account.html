@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StepInComfort.css">
+    <link rel="stylesheet" href="reset.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Step In Comfort</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Step In Comfort</h1>
+            </div>
+            <nav>
+                <ul id="MenuNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+
+            <a href="cart.html" id="carts"><i class='bx bx-cart'></i></a>
+            <img src="menu.jpg" class="menu-icon" onclick="menutoggle()">
+
+            <script>
+                var MenuNav = document.getElementById("MenuNav");
+            
+                MenuNav.style.maxHeight = "0px";
+            
+                function menutoggle() {
+                    if(MenuNav.style.maxHeight == "0px")
+                    {
+                        MenuNav.style.maxHeight = "200px";
+                    }
+                    else 
+                    {
+                        MenuNav.style.maxHeight = "0px";
+                    }
+                }
+            
+            </script>
+            
+        </div>
+        
+    </header>
+
+    <section class="home" id="home">
+        
+            <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+
+                    <form id="LogIn">
+                        <div class="input-field">
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input-field">
+                            <input type="password" placeholder="Password">
+                        </div>
+                            <button type="submit" class="logbtn">Login</button>
+                            <a href="#">Forgot password</a>
+                            <p class="social-text">Or Sign in with social platform</p>
+                            <div class="social-media">
+                                <a href="#" class="social-icon"><i class='bx bxl-facebook-circle' style='color:#0d6bef'  ></i></a>
+                                <a href="#" class="social-icon"><i class='bx bxl-twitter' style='color:#96def8'  ></i></a>
+                                <a href="#" class="social-icon"><i class='bx bxl-gmail' style='color:#50a6e7'  ></i></a>
+                                <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                            </div>
+                    </form>
+
+                    <form id="Register">
+                        <div class="input-field" id="firstname">
+                            <input type="text" placeholder="First Name">
+                        </div>
+                        <div class="input-field" id="lastname">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                        <div class="input-field" id="email">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="input-field" id="password">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="logbtn" id="reg">Register</button>
+                    </form>
+            
+            </div>
+
+    </section>
+
+
+       <!-- CONTACT SECTION -->
+       <footer class="Contact" id="contact">
+        <div class="Contact-Info">  
+            
+            <div class="social-icons">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nisi iure fugit voluptate, quam consequuntur facilis placeat error.</p>
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+            </div>
+
+            <div class="second-info">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Term & Condition</a></li>
+                    <li><a href="#">Return & Exchange</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Private Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="third-info">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Shoes</a></li>
+                </ul>
+            </div>
+
+            <div class="fourth-info">
+                <h3>Contact Us</h3>
+                <ul class="info">
+                    <li>
+                        <span><i class='bx bxs-phone-call'></i></span><p><a href="tel:+63 123456789">+63 123456789</a></p>
+                    </li>
+                    <li>
+                        <span><i class='bx bx-envelope'></i></span><p><a href="mailto:knowmore@gmail.com">knowmore@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</footer>
+
+<div class="End">
+    <p>Copyright © @2024. All Rights Reserved by Arjun Deloterio</p>
+</div>
+
+<script>
+    var LogIn = document.getElementById("LogIn");
+    var Registers = document.getElementById("Register");
+    var Indicator = document.getElementById("Indicator");
+
+        function register() {
+                Register.style.transform = "translateX(0px)";
+                LogIn.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+                Register.style.transform = "translateX(400px)";
+                LogIn.style.transform = "translateX(400px)";
+                Indicator.style.transform = "translateX(0px)";
+        }
+</script>
+</body>
+</html>

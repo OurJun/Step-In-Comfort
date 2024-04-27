@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StepInComfort.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>All Product - StepInComfort</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="navbar">
+            <div class="logo">
+                <h1>Step In Comfort</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="StepInComfort.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="#contact">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+                <a href="cart.html"><i class='bx bx-cart'></i></a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- PRODUCT SECTION -->
+    <section class="all-Product" id="products">
+        <div class="sorts-Product-text1">
+                <h2>All Product</h2>
+                
+                <form action="#" class="search">
+                    <input class="search-input" type="search" placeholder="Search">
+                    <span class="material-symbols-outlined"><i class='bx bx-search'></i></span>
+                </form>
+                
+                <select>
+                    <option>Default Sorting</option>
+                    <option>Short by Price</option>
+                    <option>Short by Popularity</option>
+                    <option>Short by Sale</option>
+                </select>
+        </div>
+
+        <div class="info-Products" id="name">
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="product-details.html"><img src="shoes 500.jpeg" alt=""></a>
+                </div>
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>  
+
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="Women-Sneakers-Denim-Casual-Shoes.webp" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Women Sneakers Denim </h4>
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$30.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="Children-s-Sports-Shoes-Mesh-Breathable.webp" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                    
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="TP Shoes Men Sneakers Fashion Rubber.jpg" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                    
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$50.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="product-details.html"><img src="shoes 500.jpeg" alt=""></a>
+                </div>
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>  
+
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="Women-Sneakers-Denim-Casual-Shoes.webp" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Women Sneakers Denim</h4>
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$30.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="Children-s-Sports-Shoes-Mesh-Breathable.webp" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                    
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$42.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-rows">
+                <div class="box-img">
+                    <a href="#"><img src="TP Shoes Men Sneakers Fashion Rubber.jpg" alt=""></a>
+                </div>
+
+                <div class="Product-heart-icon">
+                    <i class="bx bx-heart"></i>
+                </div>
+                
+                <div class="Product-Name">
+                    <h4>Sports Men Nike Shoes</h4>
+                    
+                </div>
+                <div class="Product-Price">
+                    <div>
+                       <a href="#" class="Price">$50.00</a>
+                    </div>
+                    <div class="Product-ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="page-btn" id="page-num">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594;</span>
+            </div>
+        </div>
+    </section>
+
+        <!-- CONTACT SECTION -->
+        <footer class="Contact" id="contact">
+            <div class="Contact-Info">  
+                
+                <div class="social-icons">
+                    <h3>About Us</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nisi iure fugit voluptate, quam consequuntur facilis placeat error.</p>
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+                </div>
+
+                <div class="second-info">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Term & Condition</a></li>
+                        <li><a href="#">Return & Exchange</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Private Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="third-info">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Shoes</a></li>
+                    </ul>
+                </div>
+
+                <div class="fourth-info">
+                    <h3>Contact Us</h3>
+                    <ul class="info">
+                        <li>
+                            <span><i class='bx bxs-phone-call'></i></span><p><a href="tel:+63 123456789">+63 123456789</a></p>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-envelope'></i></span><p><a href="mailto:knowmore@gmail.com">knowmore@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </footer>
+    
+    <div class="End">
+        <p>Copyright © @2024. All Rights Reserved</p>
+    </div>
+    
+</body>
+</html>
