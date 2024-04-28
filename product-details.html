@@ -54,30 +54,32 @@
     <section class="all-Product">
 
                            <!-- Product Details -->
-        <div class="single-product">
-            <div class="product-details">
-                <div class="img">
-                    <img src="shoes 500.jpeg" alt="" id="sale">
+       <main class="main-content">
 
-                    
-                </div>
-                <div class="img-details">
-                    <p>Fashion / Shoes</p>
-                    <h1>Japanese Shoes 500</h1>
-                    <h4>$42.00</h4>
-                    <select id="productSize">
-                        <option>Select Size</option>
-                        <option>Large</option>
-                        <option>Medium</option>
-                        <option>Small</option>
-                    </select>
-                    <button class="add" id="addToCartBtn" onclick="changeButton()" data-image="shoes 500.jpeg" data-name="Japanese Sports Wear" data-price="42.00" data-size="Select Size" data-quantity="1">Add To Cart</button>
-                    <h3>Product Details</h3>
-                    <br>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, nisi.<br> Exercitationem similique consectetur quasi nostrum laboriosam dolor aspernatur eveniet <br>officia! Sed eligendi in ipsam iure repellat natus libero ex magnam.</p>
-                </div>
+        <div class="hero">
+            <div class="imgs">
+                <img src="shoes 500.jpeg" alt="" id="sale">
             </div>
         </div>
+
+        <div class="product">
+            <div class="img-details">
+                <p>Fashion / Shoes</p>
+                <h1>Japanese Shoes 500</h1>
+                <h4>$42.00</h4>
+                <select id="productSize">
+                    <option>Select Size</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <button class="add" id="addToCartBtn" onclick="changeButton()" data-image="shoes 500.jpeg" data-name="Japanese Sports Wear" data-price="42.00" data-size="Select Size" data-quantity="1">Add To Cart</button>
+                <h3>Product Details</h3>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, nisi.<br> Exercitationem similique consectetur quasi nostrum laboriosam dolor aspernatur eveniet <br>officia! Sed eligendi in ipsam iure repellat natus libero ex magnam.</p>
+            </div>
+        </div>
+    </main>
 
    
         <div class="info-Products">
@@ -259,7 +261,7 @@
                 // Store the updated cart items in local storage
                 localStorage.setItem("cartItems", JSON.stringify(cartItems));
         
-                // Display the cart items (assuming you have a function named displayCartItems)
+                // Display the cart items
                 // displayCartItems();
         
                 // Change button text to "Added" after adding to cart
