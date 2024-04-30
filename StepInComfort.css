@@ -327,9 +327,11 @@ ul {
                       justify-content: space-between;
                       margin: 50px auto 50px;
                       font-size: 15px;
+                      flex-wrap: wrap;
                    }
 .sorts-Product-text1 .search {
-                              width: max-content;
+                              /* width: max-content; */
+                              max-width: 500px;
                               display: flex;
                               align-items: center;
                               padding: 14px;
