@@ -279,8 +279,8 @@ ul {
               color: #aba8a8;
               font-size: 25px;
               transition: all .42s;
+              max-width: 300px;
               flex-wrap: wrap;
-              height: fit-content;
            }
 
 .social-icons i:hover {
@@ -307,10 +307,6 @@ ul {
       padding: 15px;
       padding-bottom: 15px;
     }
-.social-icons
-{
-  flex-wrap: wrap;
-}
 
 .Contact
 {
