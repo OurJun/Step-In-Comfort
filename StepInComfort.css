@@ -797,7 +797,19 @@ a {
   .sorts-Product-text1 h2
   {
     margin-left: 120px;
-    /* margin-bottom: 10px; */
+  }
+  .sorts-Product-text1 .search-input
+  {
+    width: 200px;
+  
+  }
+  .sorts-Product-text1 .search
+  {
+    margin-left: 40px;
+  }
+  .sorts-Product-text1 #search-sort
+  {
+    margin-left: 50px;
   }
  
 }
